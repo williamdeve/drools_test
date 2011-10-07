@@ -1,0 +1,13 @@
+package test2
+
+import drools.Person;
+global java.util.List list
+rule "test rule1111"
+	when
+		$girl : Person(girlage:age, sex == "F" )
+	//$boy : Person( boyAge : age->( girlAge.intValue() <= boyAge.intValue() - 2 ), sex == 'M' )
+	then
+		list.add($girl.getName());
+		//System.out.println("Boy=[" + $boy.getName() + "," + $boy.getAge() + "], Girl=[" + $girl.getName() + "," + $girl.getAge() + "].");
+		System.out.println(" Girl=[" + $girl.getName() + "," + $girl.getAge() + "].");
+end

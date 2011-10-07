@@ -1,0 +1,32 @@
+#created on: 2011-10-7
+package test
+
+#list any import classes here.
+
+import java.uitls.List
+
+#declare any global variables here
+
+function myFunction( ... ) {
+    #function content (can have multiple functions) 
+}
+
+
+
+rule "test"
+	
+	when
+		#conditions
+	then 
+		#actions
+		
+end
+
+rule "Your Second Rule"
+	#include attributes such as "salience" here...
+	when
+		#conditions
+	then 
+		#actions
+		
+end

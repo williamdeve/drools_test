@@ -1,0 +1,7 @@
+<object-stream>
+<org.drools.audit.event.ObjectLogEvent>
+  <type>1</type>
+  <factId>1</factId>
+  <objectToString>[drools.Person@1bbd7b2, drools.Person@14df764, drools.Person@1acfa31, drools.Person@15dd910, drools.Person@15dd910, drools.Person@55bb93]</objectToString>
+</org.drools.audit.event.ObjectLogEvent>
+</object-stream>
