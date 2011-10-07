@@ -78,8 +78,6 @@ public class Test {
 		}
 //		statefulSession.dispose();
 		//logger.close();
-
-		
 		}
 
 }
