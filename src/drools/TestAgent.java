@@ -32,8 +32,8 @@ public class TestAgent {
 		//create a agent cinfig
 		KnowledgeAgentConfiguration aconf = KnowledgeAgentFactory.newKnowledgeAgentConfiguration();
 		//ÊÇ·ñÉ¨ÃèÄ¿Â¼
-		aconf.setProperty("drools.agent.scanDirectories","false");  
-        aconf.setProperty("drools.agent.newInstance","false"); 
+		aconf.setProperty("drools.agent.scanDirectories","true");  
+        aconf.setProperty("drools.agent.newInstance","true"); 
         //create a agent
         KnowledgeAgent kagent = KnowledgeAgentFactory.newKnowledgeAgent("testname",aconf);  
         kagent.applyChangeSet(ResourceFactory.newClassPathResource("resources/resource.xml"));
