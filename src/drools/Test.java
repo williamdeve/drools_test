@@ -25,6 +25,8 @@ public class Test {
 		// TODO Auto-generated method stub
 		KnowledgeBuilder kbd = KnowledgeBuilderFactory.newKnowledgeBuilder();
 		kbd.add(ResourceFactory.newClassPathResource("resources/test.drl",Test.class), ResourceType.DRL);
+		//use url resource :get drl from Guvnor
+		//kbd.add(ResourceFactory.newUrlResource(""), ResourceType.DRL);
 		if(kbd.hasErrors()) System.out.println(kbd.getErrors().toString());
 		Collection<KnowledgePackage> kpackage = kbd.getKnowledgePackages();
 		KnowledgeBaseConfiguration kbc = KnowledgeBaseFactory.newKnowledgeBaseConfiguration();
