@@ -3,9 +3,12 @@ package drools;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.drools.KnowledgeBase;
 import org.drools.agent.KnowledgeAgent;
 import org.drools.agent.KnowledgeAgentConfiguration;
 import org.drools.agent.KnowledgeAgentFactory;
+import org.drools.builder.KnowledgeBuilder;
+import org.drools.builder.KnowledgeBuilderFactory;
 import org.drools.io.ResourceChangeScannerConfiguration;
 import org.drools.io.ResourceFactory;
 import org.drools.runtime.StatefulKnowledgeSession;
@@ -34,8 +37,14 @@ public class TestAgent {
         //create a agent
         KnowledgeAgent kagent = KnowledgeAgentFactory.newKnowledgeAgent("testname",aconf);  
         kagent.applyChangeSet(ResourceFactory.newClassPathResource("resources/resource.xml"));
+        //no use
+       // KnowledgeBuilder kbd = KnowledgeBuilderFactory.newKnowledgeBuilder();
+        
         //create a stateful session
-        StatefulKnowledgeSession statefulSession=kagent.getKnowledgeBase().newStatefulKnowledgeSession();
+        KnowledgeBase kbase = kagent.getKnowledgeBase();
+        //no use
+        //kbase.addKnowledgePackages(kbd.getKnowledgePackages());
+        StatefulKnowledgeSession statefulSession=kbase.newStatefulKnowledgeSession();
         //这样的用法表示使用最近一次编译的knowledgebase的session
        //StatelessKnowledgeSession statelessSession= kagent.newStatelessKnowledgeSession();
         Person p = new Person();
