@@ -33,7 +33,7 @@ public class TestAgent {
 		KnowledgeAgentConfiguration aconf = KnowledgeAgentFactory.newKnowledgeAgentConfiguration();
 		//ÊÇ·ñÉ¨ÃèÄ¿Â¼
 		aconf.setProperty("drools.agent.scanDirectories","false");  
-        aconf.setProperty("drools.agent.newInstance","true"); 
+        aconf.setProperty("drools.agent.newInstance","false"); 
         //create a agent
         KnowledgeAgent kagent = KnowledgeAgentFactory.newKnowledgeAgent("testname",aconf);  
         kagent.applyChangeSet(ResourceFactory.newClassPathResource("resources/resource.xml"));
@@ -49,7 +49,7 @@ public class TestAgent {
        //StatelessKnowledgeSession statelessSession= kagent.newStatelessKnowledgeSession();
         Person p = new Person();
 		p.setAge(30);
-		p.setSex("M");
+		p.setSex("F");
 		p.setName("Mike");
 		statefulSession.insert(p);
 //		statelessSession.execute(p);

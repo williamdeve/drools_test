@@ -2,12 +2,8 @@
 package test
 
 #list any import classes here.
-
-import java.uitls.List
-
-#declare any global variables here
-
-function myFunction( ... ) {
+import java.util.List;
+function test() {
     #function content (can have multiple functions) 
 }
 
